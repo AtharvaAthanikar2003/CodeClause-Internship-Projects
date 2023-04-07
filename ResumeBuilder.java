@@ -23,31 +23,35 @@ public class ResumeBuilder {
     }
 
     public void enterPersonalInfo() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your name: ");
-        this.name = scanner.nextLine();
-        System.out.println("Enter your email: ");
-        this.email = scanner.nextLine();
-        System.out.println("Enter your phone number: ");
-        this.phone = scanner.nextLine();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Enter your name: ");
+            this.name = scanner.nextLine();
+            System.out.println("Enter your email: ");
+            this.email = scanner.nextLine();
+            System.out.println("Enter your phone number: ");
+            this.phone = scanner.nextLine();
+        }
     }
 
     public void enterEducation() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your education: ");
-        this.education = scanner.nextLine();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Enter your education: ");
+            this.education = scanner.nextLine();
+        }
     }
 
     public void enterExperience() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your experience: ");
-        this.experience = scanner.nextLine();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Enter your experience: ");
+            this.experience = scanner.nextLine();
+        }
     }
 
     public void enterSkills() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your skills: ");
-        this.skills = scanner.nextLine();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Enter your skills: ");
+            this.skills = scanner.nextLine();
+        }
     }
 
     public void generateResume() {
