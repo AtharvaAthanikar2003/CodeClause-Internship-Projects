@@ -3,7 +3,6 @@ Online Resume Builder Using Java Language
 */
 
 import java.util.Scanner;
-
 public class ResumeBuilder {
     private String name;
     private String email;
@@ -11,7 +10,6 @@ public class ResumeBuilder {
     private String education;
     private String experience;
     private String skills;
-
     public ResumeBuilder() {
         // Constructor to initialize the resume builder
         this.name = "";
@@ -21,7 +19,6 @@ public class ResumeBuilder {
         this.experience = "";
         this.skills = "";
     }
-
     public void enterPersonalInfo() {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Enter your name: ");
@@ -32,28 +29,24 @@ public class ResumeBuilder {
             this.phone = scanner.nextLine();
         }
     }
-
     public void enterEducation() {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Enter your education: ");
             this.education = scanner.nextLine();
         }
     }
-
     public void enterExperience() {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Enter your experience: ");
             this.experience = scanner.nextLine();
         }
     }
-
     public void enterSkills() {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Enter your skills: ");
             this.skills = scanner.nextLine();
         }
     }
-
     public void generateResume() {
         System.out.println("Resume:");
         System.out.println("Name: " + this.name);
@@ -63,7 +56,6 @@ public class ResumeBuilder {
         System.out.println("Experience: " + this.experience);
         System.out.println("Skills: " + this.skills);
     }
-
     public static void main(String[] args) {
         ResumeBuilder resumeBuilder = new ResumeBuilder();
         resumeBuilder.enterPersonalInfo();
